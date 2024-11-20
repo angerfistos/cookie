@@ -1,19 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Cookies</title>
+    <script src="./app.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="app.js" defer></script>
-    <title>Cookie</title>
 </head>
-<body class="p-4">
-    <form class="flex flex-col gap-4 w-1/2 mx-auto" id="cookieForm">
-        <input type="text" name="name" id="name" placeholder="Name" class="border py-2 px-4 rounded-xl">
-        <input type="email" name="email" id="email" placeholder="Email" class="border py-2 px-4 rounded-xl">
-        <button type="submit" class="border py-2 px-4 rounded-xl bg-blue-500 text-white">Submit</button>
-        <button type="button" class="border py-2 px-4 rounded-xl bg-red-500 text-white" id="Afficher">Afficher les données du cookie</button>
-        <div id="message" class="mt-4"></div>
+<body class="bg-gray-100 p-5 mx-auto">
+    <form id="formulaireCookie" class="bg-white p-5 rounded shadow-md max-w-lg mx-auto">
+        <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700">Nom</label>
+            <input type="text" name="name" id="name" placeholder="Nom" required
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        </div>
+        <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" required
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        </div>
+        <button type="submit"
+            class="w-full bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            Créer un cookie
+        </button>
     </form>
+
+    <button id="Afficher" class="mt-4 bg-gray-700 text-white py-2 px-4 rounded hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2 mx-auto block">
+        Afficher les cookies
+    </button>
+
+    <div id="message" class="mt-4 text-center text-sm text-green-600 font-medium"></div>
+
+    <!-- Conteneur pour les cartes -->
+    <div id="ContainerCard" class="mt-6 space-y-4 max-w-lg mx-auto">
+        <!-- Modèle HTML pour une carte -->
+        <div class="card hidden bg-white p-4 rounded shadow-md relative">
+            <div class="card-content">
+                <strong>Nom:</strong> <span class="card-name"></span><br>
+                <strong>Email:</strong> <span class="card-email"></span>
+            </div>
+            <button class="delete absolute top-2 right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-red-600">
+                X
+            </button>
+        </div>
+    </div>
 </body>
 </html>
