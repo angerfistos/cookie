@@ -12,4 +12,4 @@ form.addEventListener('submit', () => {
 }
 );
 
-console.log(document.cookie);
+console.log(document.cookie); 
