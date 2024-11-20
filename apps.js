@@ -8,8 +8,6 @@ form.addEventListener('submit', () => {
     const name = formData.get('name');
     document.cookie = `name=${name}`;
     window.location = 'index.html';
-    
+    console.log(document.cookie); 
 }
 );
-
-console.log(document.cookie); 
