@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js" defer></script>
+    <title>Cookie</title>
+</head>
+<body class="p-4">
+    <form class="flex flex-col gap-4 w-1/2 mx-auto">
+        <input type="text" name="name" id="name" placeholder="Name" class="border py-2 px-4 rounded-xl">
+        <input type="email" name="email" id="email" placeholder="Email" class="border py-2 px-4 rounded-xl">
+        <button type="submit" class="border py-2 px-4 rounded-xl bg-blue-500 text-white">Submit</button>
+        <button type="submit" class="border py-2 px-4 rounded-xl bg-red-500 text-white" id="Afficher">Afficher Les données du cookies</button>
+        <div id="message" class="mt-4"></div>
+    </form>
+</body>
+</html>
